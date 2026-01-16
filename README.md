@@ -17,9 +17,11 @@ Tech Stack Used In This Project
 •	PyPDF, docx2txt, unstructured (document parsing)
 
 # Quick Installation (Windows)
-python -m venv .venv .venv\Scripts\activate
-pip install -r requirements.txt streamlit run app.py
-Supported File Types
+python -m venv .venv  
+.venv\Scripts\activate  
+pip install -r requirements.txt  
+streamlit run app.py  
+# Supported File Types
 •	.pdf
 •	.docx
 •	.txt
