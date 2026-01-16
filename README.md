@@ -37,7 +37,7 @@ streamlit run app.py
  <img width="900" height="445" alt="image" src="https://github.com/user-attachments/assets/90f2b12a-0710-480d-bb73-395634b3b314" />
 
 # Author
-Theja Nadeeja Amarasiri
-Computer Science (AI) Undergraduate
+Theja Nadeeja Amarasiri  
+Computer Science (AI) Undergraduate  
 Swinburne University of Technology
 
