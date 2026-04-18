@@ -8,13 +8,8 @@ Features
 # Architecture Overview
 User Uploads Docs ↓ Document Loaders (PDF, DOCX, TXT, MD) ↓ Recursive Text Splitter ↓ HuggingFace Embeddings ↓ FAISS Vector Store ↓ Retriever (k=2) ↓ Groq LLM ↓ Final Answer
 
-graph TD
-    A[User Uploads Docs] --> B[Recursive Text Splitting]
-    B --> C[HuggingFace Embeddings]
-    C --> D[FAISS Vector Store]
-    D --> E[Retriever k=3]
-    E --> F[Groq LLM Contextualization]
-    F --> G[Final Natural Language Answer]
+<img width="846" height="1321" alt="rag pipeline" src="https://github.com/user-attachments/assets/150b8b34-4071-4e25-b48b-9fae73d5b93c" />
+
     
 Tech Stack Used In This Project
 •	Python 3.10+
