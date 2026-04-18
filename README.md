@@ -11,7 +11,7 @@ User Uploads Docs ↓ Document Loaders (PDF, DOCX, TXT, MD) ↓ Recursive Text S
 <img width="846" height="1321" alt="rag pipeline" src="https://github.com/user-attachments/assets/150b8b34-4071-4e25-b48b-9fae73d5b93c" />
 
     
-Tech Stack Used In This Project
+# Tech Stack Used In This Project
 •	Python 3.10+
 •	Streamlit (UI)
 •	LangChain (RAG pipeline)
