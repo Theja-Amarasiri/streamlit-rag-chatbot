@@ -7,6 +7,15 @@ Features
 4.	Modular Architecture demonstration Optimizing document loading, chunking, vector storage, and RAG pipeline are cleanly separated.
 # Architecture Overview
 User Uploads Docs ↓ Document Loaders (PDF, DOCX, TXT, MD) ↓ Recursive Text Splitter ↓ HuggingFace Embeddings ↓ FAISS Vector Store ↓ Retriever (k=2) ↓ Groq LLM ↓ Final Answer
+
+graph TD
+    A[User Uploads Docs] --> B[Recursive Text Splitting]
+    B --> C[HuggingFace Embeddings]
+    C --> D[FAISS Vector Store]
+    D --> E[Retriever k=3]
+    E --> F[Groq LLM Contextualization]
+    F --> G[Final Natural Language Answer]
+    
 Tech Stack Used In This Project
 •	Python 3.10+
 •	Streamlit (UI)
@@ -38,6 +47,6 @@ streamlit run app.py
 
 # Author
 Theja Nadeeja Amarasiri  
-Computer Science (AI) Undergraduate  
+Computer Science (Artificial Intelligence) Undergraduate  
 Swinburne University of Technology
 
