@@ -42,21 +42,28 @@ with st.sidebar:
 st.title("RAG Doc‑Helper :)")
 st.write("Ask anything about your documents!")
 
-# Chat input section
+# Display past chat history
+for msg in st.session_state.messages: 
+    with st.chat_message(msg["role"]): 
+        st.write(msg["content"])
+
+# Accept and process new input
 user_input = st.chat_input("Ask something about your documents")
 
 if user_input:
+    # Display user message
+    with st.chat_message("user"):
+        st.write(user_input)
     st.session_state.messages.append({"role": "user", "content": user_input})
 
+    # Generate RAG response
     if st.session_state.retriever:
         rag = build_rag_pipeline(st.session_state.retriever)
         answer = rag(user_input)
     else:
         answer = "Please upload documents first."
 
+    # Display assistant response
+    with st.chat_message("assistant"):
+        st.write(answer)
     st.session_state.messages.append({"role": "assistant", "content": answer})
-
-# Display chat history
-for msg in st.session_state.messages: 
-    with st.chat_message(msg["role"]): 
-        st.write(msg["content"])
