@@ -4,9 +4,9 @@ from langchain_core.prompts import ChatPromptTemplate
 
 def build_rag_pipeline(retriever):
     llm = ChatGroq(
-        model="groq/compound",
+        model="groq/compound", #The Groq model we use
         temperature=0,
-        api_key=os.getenv("GROQ_API_KEY")
+        api_key=os.getenv("GROQ_API_KEY") # The Groq API key that needs to be added to a .env file
     )
 
     prompt = ChatPromptTemplate.from_template(
@@ -18,7 +18,7 @@ def build_rag_pipeline(retriever):
         docs = retriever.invoke(question)
         context = "\n\n".join([d.page_content for d in docs])
 
-        # Prevent Groq 413 errors
+        # Prevent Groq 413 errors due to large docs
         MAX_CONTEXT_CHARS = 8000
         context = context[:MAX_CONTEXT_CHARS]
 

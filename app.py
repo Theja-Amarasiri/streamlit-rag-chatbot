@@ -42,7 +42,7 @@ with st.sidebar:
 st.title("RAG Doc‑Helper :)")
 st.write("Ask anything about your documents!")
 
-# Chat input
+# Chat input section
 user_input = st.chat_input("Ask something about your documents")
 
 if user_input:
