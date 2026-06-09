@@ -14,3 +14,7 @@ faiss_index/
 *.docx
 *.txt
 *.md
+
+
+# Exceptions
+!requirements.txt
