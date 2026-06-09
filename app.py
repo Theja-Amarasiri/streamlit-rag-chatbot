@@ -31,9 +31,13 @@ with st.sidebar:
         st.session_state.messages = []
 
         if uploaded_files:
-           docs = load_documents(uploaded_files)
-           st.session_state.retriever = build_vector_store(docs)
-           st.success(f"{len(uploaded_files)} document(s) uploaded!")
+            docs = load_documents(uploaded_files)
+            
+            if docs: 
+                st.session_state.retriever = build_vector_store(docs)
+                st.success(f"{len(uploaded_files)} document(s) uploaded!")
+            else:
+                st.error("No text could be extracted from the uploaded files.")
 
         for f in uploaded_files:
             st.write(f"- {f.name}")
